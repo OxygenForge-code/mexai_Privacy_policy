@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MexAI - Privacy Policy / Gizlilik Politikası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Dil Seçici */
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: #a0a0b0;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .lang-btn.active {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(99,102,241,0.4);
+        }
+        
+        .lang-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(180deg, rgba(99,102,241,0.1) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+        
+        .subtitle {
+            color: #a0a0b0;
+            font-size: 1.1rem;
+        }
+        
+        /* İçerik Kartları */
+        .content-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(99,102,241,0.3);
+        }
+        
+        h2 {
+            color: #6366f1;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 {
+            color: #8b5cf6;
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+        }
+        
+        p {
+            color: #c0c0d0;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            color: #c0c0d0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background: linear-gradient(90deg, rgba(99,102,241,0.2), rgba(139,92,246,0.2));
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #6366f1;
+            margin: 20px 0;
+        }
+        
+        .date {
+            text-align: center;
+            color: #6366f1;
+            font-weight: 600;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(99,102,241,0.1);
+            border-radius: 16px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #606070;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .email {
+            color: #6366f1;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-card {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .content-card:nth-child(2) { animation-delay: 0.1s; }
+        .content-card:nth-child(3) { animation-delay: 0.2s; }
+        .content-card:nth-child(4) { animation-delay: 0.3s; }
+        .content-card:nth-child(5) { animation-delay: 0.4s; }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo { font-size: 2rem; }
+            .content-card { padding: 20px; }
+            .lang-switch { top: 10px; right: 10px; }
+        }
+        
+        /* Gizli içerik */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dil Seçici -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('tr')">🇹🇷 Türkçe</button>
+        <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+    </div>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">MexAI</div>
+            <div class="subtitle">Privacy Policy / Gizlilik Politikası</div>
+        </div>
+
+        <!-- TÜRKÇE İÇERİK -->
+        <div id="content-tr" class="lang-content active">
+            
+            <div class="date">📅 Son Güncelleme: 5 Nisan 2026</div>
+
+            <div class="content-card">
+                <h2>🔒 Genel Bakış</h2>
+                <p>MexAI ("biz", "bizim" veya "uygulama") olarak kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, uygulamamızı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve korunduğunu açıklar.</p>
+                <div class="highlight">
+                    MexAI'yi kullanarak bu politikayı kabul etmiş sayılırsınız. Eğer kabul etmiyorsanız, lütfen uygulamayı kullanmayın.
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>📊 Toplanan Bilgiler</h2>
+                <h3>1. Yerel Depolama (Local Storage)</h3>
+                <ul>
+                    <li>AI bellek verileri (kullanıcı tercihleri, isim, projeler)</li>
+                    <li>Sohbet geçmişi (sadece cihazda saklanır)</li>
+                    <li>Ayarlar (tema, yazı boyutu, TTS tercihleri)</li>
+                </ul>
+                
+                <h3>2. Dosya Sistemi Erişimi</h3>
+                <ul>
+                    <li><code>/storage/emulated/0/MexAI/</code> klasöründe oluşturulan dosyalar</li>
+                    <li>Kullanıcı tarafından oluşturulan HTML, JS, CSS dosyaları</li>
+                    <li>Bu dosyalar sadece yerel cihazda saklanır, buluta gönderilmez</li>
+                </ul>
+
+                <h3>3. API İletişimi</h3>
+                <ul>
+                    <li>Groq API'ye gönderilen mesajlar (geçici işlem için)</li>
+                    <li>API yanıtları (gerçek zamanlı olarak işlenir, saklanmaz)</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>🛡️ Bilgi Kullanımı</h2>
+                <p>Topladığımız bilgiler şu amaçlarla kullanılır:</p>
+                <ul>
+                    <li>✅ AI asistanının kişiselleştirilmesi (bellek özelliği)</li>
+                    <li>✅ Kullanıcı tercihlerinin hatırlanması</li>
+                    <li>✅ Yerel dosya yönetimi ve düzenleme</li>
+                    <li>✅ Uygulama deneyiminin iyileştirilmesi</li>
+                </ul>
+                <div class="highlight">
+                    ❌ <strong>Verileriniz asla:</strong><br>
+                    • Üçüncü taraflarla paylaşılmaz<br>
+                    • Harici sunuculara gönderilmez<br>
+                    • Reklam amaçlı kullanılmaz<br>
+                    • Satılmaz veya ticari amaçla kullanılmaz
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>🔐 Veri Güvenliği</h2>
+                <p>Tüm verileriniz <strong>sadece cihazınızda</strong> saklanır:</p>
+                <ul>
+                    <li>📱 <strong>SharedPreferences:</strong> Ayarlar ve bellek verileri</li>
+                    <li>💾 <strong>Dahili Depolama:</strong> Sohbet geçmişi ve AI belleği</li>
+                    <li>📁 <strong>Dosya Sistemi:</strong> Oluşturulan dosyalar</li>
+                </ul>
+                <p>Internete sadece API çağrıları için çıkılır ve bu çağrılarda sadece gönderdiğiniz mesajlar iletilir.</p>
+            </div>
+
+            <div class="content-card">
+                <h2>👤 Kullanıcı Hakları</h2>
+                <p>Aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li>🗑️ <strong>Belleği Sil:</strong> Ayarlar > Tüm Belleği Sil</li>
+                    <li>💬 <strong>Sohbeti Sil:</strong> Ayarlar > Tüm Sohbetleri Sil</li>
+                    <li>📁 <strong>Dosya Yönetimi:</strong> Dosyaları silme, düzenleme, dışa aktarma</li>
+                    <li>⚙️ <strong>Ayarları Değiştirme:</strong> Tema, dil, TTS tercihleri</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>🤖 Yapay Zeka ve Üçüncü Taraflar</h2>
+                <p>MexAI, Groq API hizmetini kullanır:</p>
+                <ul>
+                    <li>Mesajlarınız Groq'un sunucularına gönderilir ve işlenir</li>
+                    <li>Groq'un gizlilik politikası: <a href="https://groq.com/privacy" style="color:#6366f1">groq.com/privacy</a></li>
+                    <li>MexAI, Groq'un veri kullanımından sorumlu değildir</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>📧 İletişim</h2>
+                <div class="contact-box">
+                    <p>Gizlilik politikası ile ilgili sorularınız için:</p>
+                    <p class="email">privacy@mexai.app</p>
+                    <p style="margin-top:15px;color:#606070;font-size:0.9rem;">
+                        GenişKapı Şirketi<br>
+                        Ankara, Türkiye
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content">
+            
+            <div class="date">📅 Last Updated: April 5, 2026</div>
+
+            <div class="content-card">
+                <h2>🔒 Overview</h2>
+                <p>At MexAI ("we", "our", or "the app"), we take user privacy very seriously. This Privacy Policy explains what information is collected when you use our application, how it is used, and how it is protected.</p>
+                <div class="highlight">
+                    By using MexAI, you agree to this policy. If you do not agree, please do not use the application.
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>📊 Information We Collect</h2>
+                <h3>1. Local Storage</h3>
+                <ul>
+                    <li>AI memory data (user preferences, name, projects)</li>
+                    <li>Chat history (stored only on your device)</li>
+                    <li>Settings (theme, font size, TTS preferences)</li>
+                </ul>
+                
+                <h3>2. File System Access</h3>
+                <ul>
+                    <li>Files created in <code>/storage/emulated/0/MexAI/</code> directory</li>
+                    <li>User-created HTML, JS, CSS files</li>
+                    <li>These files are stored locally only, not sent to cloud</li>
+                </ul>
+
+                <h3>3. API Communication</h3>
+                <ul>
+                    <li>Messages sent to Groq API (for temporary processing)</li>
+                    <li>API responses (processed in real-time, not stored)</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>🛡️ How We Use Information</h2>
+                <p>The information we collect is used for:</p>
+                <ul>
+                    <li>✅ Personalizing the AI assistant (memory feature)</li>
+                    <li>✅ Remembering user preferences</li>
+                    <li>✅ Local file management and editing</li>
+                    <li>✅ Improving application experience</li>
+                </ul>
+                <div class="highlight">
+                    ❌ <strong>Your data is NEVER:</strong><br>
+                    • Shared with third parties<br>
+                    • Sent to external servers (except API calls)<br>
+                    • Used for advertising<br>
+                    • Sold or used commercially
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>🔐 Data Security</h2>
+                <p>All your data is stored <strong>only on your device</strong>:</p>
+                <ul>
+                    <li>📱 <strong>SharedPreferences:</strong> Settings and memory data</li>
+                    <li>💾 <strong>Internal Storage:</strong> Chat history and AI memory</li>
+                    <li>📁 <strong>File System:</strong> Created files</li>
+                </ul>
+                <p>Internet is only used for API calls, and only your messages are transmitted.</p>
+            </div>
+
+            <div class="content-card">
+                <h2>👤 Your Rights</h2>
+                <p>You have the following rights:</p>
+                <ul>
+                    <li>🗑️ <strong>Clear Memory:</strong> Settings > Clear All Memory</li>
+                    <li>💬 <strong>Clear Chats:</strong> Settings > Clear All Chats</li>
+                    <li>📁 <strong>File Management:</strong> Delete, edit, export files</li>
+                    <li>⚙️ <strong>Change Settings:</strong> Theme, language, TTS preferences</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>🤖 AI and Third Parties</h2>
+                <p>MexAI uses the Groq API service:</p>
+                <ul>
+                    <li>Your messages are sent to and processed on Groq's servers</li>
+                    <li>Groq's privacy policy: <a href="https://groq.com/privacy" style="color:#6366f1">groq.com/privacy</a></li>
+                    <li>MexAI is not responsible for Groq's data usage</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>📧 Contact Us</h2>
+                <div class="contact-box">
+                    <p>For privacy policy questions:</p>
+                    <p class="email">official.mexa@post.com</p>
+                    <p style="margin-top:15px;color:#606070;font-size:0.9rem;">
+                        Geniskapi Company<br>
+                        Turkey
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 MexAI by GenişKapı Şirketi. All rights reserved.</p>
+            <p style="margin-top:10px;font-size:0.9rem;">Made with ❤️ in Ankara, Turkey</p>
+        </div>
+
+    </div>
+
+    <script>
+        function setLang(lang) {
+            // Butonları güncelle
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // İçerikleri değiştir
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            // Sayfa dilini güncelle
+            document.documentElement.lang = lang;
+        }
+        
+        // Sayfa yüklendiğinde cihaz dilini algıla
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('tr')) {
+                // Türkçe ise varsayılan zaten TR, bir şey yapma
+            } else {
+                // İngilizce ise switch yap
+                document.querySelector('.lang-btn:nth-child(2)').click();
+            }
+        };
+    </script>
+
+</body>
+</html>
+
